@@ -1,0 +1,11 @@
+78098b89c88a74ebe8c20117b8754620
+::res://::1788170544
+default_env.tres::Environment::7534912357195138781::1788170536::0::1::::<><><>0<>0<><>::
+icon.png::CompressedTexture2D::774560372047582717::1600658962::1788170172::1::::<><><>0<>0<>1e754ca13d5a1457f37ed3f96d184f1d<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
+particle_smoke.png::CompressedTexture2D::3653740388556035935::1600661658::1788170182::1::::<><><>0<>0<>9909d2b8aeadedb59175f2a470053af5<>res://.godot/imported/particle_smoke.png-12051cca2c26e705e8fc0fbcc3fafaee.s3tc.ctex::
+Scene_Waterfall.tscn::PackedScene::-1::1788170589::0::1::::<><><>0<>0<><>::res://Waterfall.tres<>res://particle_smoke.png<>res://waterfall_tu.obj
+waterfall.gdshader::Shader::2796787787213778353::1788170526::0::1::::<><><>0<>0<><>::
+Waterfall.tres::ShaderMaterial::-1::1788170535::0::1::::<><><>0<>0<><>::res://Water_N_A2.png<>res://waterfall_tex.png
+waterfall_tex.png::CompressedTexture2D::5387558254052915403::1600659968::1788170729::1::::<><><>0<>0<>de8fd9d1b757fa0d606fd4422dd1c17f<>res://.godot/imported/waterfall_tex.png-d4beda9af84a7cf66a8752cbf9d7f501.s3tc.ctex::
+waterfall_tu.obj::Mesh::1523265433473400938::1600659008::1788170172::1::::<><><>0<>0<>462aa3288bfa96a4e23c377f212dcc57<>res://.godot/imported/waterfall_tu.obj-91998d304144014aa372d388a4201a3c.mesh<*>res://.godot/imported/waterfall_tu.obj-91998d304144014aa372d388a4201a3c.mesh::
+Water_N_A2.png::CompressedTexture2D::746806338192176317::1600659992::1788170729::1::::<><><>0<>0<>44bf48c359df53fe1db05cead9944804<>res://.godot/imported/Water_N_A2.png-a7490fe6c4445f1419ebee4b2a55ca02.s3tc.ctex::

@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://d0um4pq83woip"]
+
+[ext_resource type="Material" path="res://Waterfall.tres" id="1_material"]
+[ext_resource type="Texture2D" uid="uid://bsb5tnmjfhvoh" path="res://particle_smoke.png" id="2_smoke"]
+[ext_resource type="ArrayMesh" uid="uid://vx47u065lyja" path="res://waterfall_tu.obj" id="3_mesh"]
+
+[sub_resource type="Gradient" id="Gradient_1"]
+offsets = PackedFloat32Array(0, 0.155556, 0.607407, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1"]
+gradient = SubResource("Gradient_1")
+
+[sub_resource type="Curve" id="Curve_1"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.447727), -2.15455, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_1"]
+curve = SubResource("Curve_1")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1"]
+emission_shape = 2
+emission_sphere_radius = 1.0
+angle_max = 360.0
+initial_velocity_min = 0.12
+initial_velocity_max = 0.12
+angular_velocity_min = 66.21
+angular_velocity_max = 66.21
+gravity = Vector3(0, 9.8, 0)
+radial_accel_min = 16.09
+radial_accel_max = 16.09
+tangential_accel_min = 18.39
+tangential_accel_max = 18.39
+scale_min = 0.0
+scale_max = 3.0
+scale_curve = SubResource("CurveTexture_1")
+color_ramp = SubResource("GradientTexture1D_1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_smoke")
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_1"]
+material = SubResource("StandardMaterial3D_1")
+size = Vector2(2, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1"]
+size = Vector3(12, 12, 12)
+
+[node name="Node3D" type="Node3D" unique_id=984313970]
+
+[node name="waterfall_tu" type="MeshInstance3D" parent="." unique_id=1936037984]
+mesh = ExtResource("3_mesh")
+surface_material_override/0 = ExtResource("1_material")
+
+[node name="Particles" type="GPUParticles3D" parent="waterfall_tu" unique_id=1061221528]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5198, -11.0122, 0)
+visible = false
+amount = 32
+lifetime = 0.6
+randomness = 1.0
+visibility_aabb = AABB(-8, -4, -10, 16, 20, 20)
+process_material = SubResource("ParticleProcessMaterial_1")
+draw_pass_1 = SubResource("QuadMesh_1")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1682870846]
+transform = Transform3D(-0.584237, -0.772634, 0.248403, -0.711034, 0.634852, 0.302314, -0.391277, 0, -0.920273, 13.4608, 3.7826, -7.45068)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=748505546]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 22)
+current = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=105260157]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.46863, 3.86362, 1.87353)
+mesh = SubResource("BoxMesh_1")
+
+[node name="MeshInstance7" type="MeshInstance3D" parent="." unique_id=1640946662]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4003, 8.04462, 10.1078)
+mesh = SubResource("BoxMesh_1")
+
+[node name="MeshInstance8" type="MeshInstance3D" parent="." unique_id=567736687]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5774, 8.04462, -9.05325)
+mesh = SubResource("BoxMesh_1")
+
+[node name="MeshInstance2" type="MeshInstance3D" parent="." unique_id=1157008264]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8529, 1.38373, -2.36104)
+mesh = SubResource("BoxMesh_1")
+
+[node name="MeshInstance5" type="MeshInstance3D" parent="." unique_id=1627563093]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.64851, -3.21993, -10.6232)
+mesh = SubResource("BoxMesh_1")
+
+[node name="MeshInstance6" type="MeshInstance3D" parent="." unique_id=1575936158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.392808, -4.9652, 10.657)
+mesh = SubResource("BoxMesh_1")
+
+[node name="MeshInstance9" type="MeshInstance3D" parent="." unique_id=1305553779]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.31879, -17.852, -0.348362)
+mesh = SubResource("BoxMesh_1")
+
+[node name="MeshInstance4" type="MeshInstance3D" parent="." unique_id=774781494]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.92657, -1.11471, 7.98739)
+mesh = SubResource("BoxMesh_1")
+
+[node name="MeshInstance3" type="MeshInstance3D" parent="." unique_id=497675874]
+transform = Transform3D(0.726779, 0.686872, 0, -0.686872, 0.726779, 0, 0, 0, 1, -0.00885487, -9.29131, 0)
+mesh = SubResource("BoxMesh_1")
